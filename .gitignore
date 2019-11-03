@@ -1,0 +1,4 @@
+.venv
+.#.*
+./versions
+config.json

@@ -1,0 +1,16 @@
+version: "3.3"
+
+services:
+  timescale:
+    image: timescale/timescaledb:latest-pg11
+    environment:
+      - POSTGRES_USER=PG1
+      - POSTGRES_PASSWORD=SECUREPASSWORD1
+      - POSTGRES_DB=statty
+    volumes:
+      - "./pg-etc:/etc/postgres"
+      - "./pg-log:/var/log/postgres"
+      - "./pg-lib:/var/lib/postgres"
+    ports:
+      - 5432:5432
+      
